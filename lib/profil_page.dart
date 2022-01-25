@@ -51,9 +51,10 @@ class _ProfilePageState extends State<ProfilePage> {
                       Container(
                         height: 140,
                         width: 140,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 8),
                             shape: BoxShape.circle,
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 fit: BoxFit.cover,
                                 image: AssetImage("assets/images/pic.png"))),
                       ),
