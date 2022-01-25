@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class RacipeBundle {
   int id, chefs, recipes;
@@ -45,3 +45,20 @@ List<RacipeBundle> racipeBundle = [
     color: const Color(0xFF2DBBD8),
   )
 ];
+
+class VegCards {
+  String dishimage;
+  String titles;
+  String chefimage;
+  String chefname;
+  String time;
+  final Color color;
+
+  VegCards(
+      {required this.chefimage,
+      required this.chefname,
+      required this.dishimage,
+      required this.titles,
+      required this.time,
+      required this.color});
+}
