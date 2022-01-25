@@ -24,7 +24,7 @@ class _ProfilePageState extends State<ProfilePage> {
           centerTitle: true,
           title: const Text("Profile"),
           actions: [
-            FlatButton(
+            TextButton(
                 onPressed: () {},
                 child: const Text(
                   "Edit",

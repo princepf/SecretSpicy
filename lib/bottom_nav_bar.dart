@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:thesecretespicy/home_page.dart';
 import 'package:thesecretespicy/profil_page.dart';
 
+import 'cook_and_chefs_page.dart';
+
 class BottomNavBar extends StatefulWidget {
-  BottomNavBar({Key? key}) : super(key: key);
+  const BottomNavBar({Key? key}) : super(key: key);
 
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
@@ -14,8 +16,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   List<Widget> screen = [
     const HomePage(),
     const HomePage(),
-    const HomePage(),
-    const HomePage(),
+    const CookAndChefsPage(),
     const ProfilePage(),
   ];
 
@@ -32,12 +33,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
         unselectedItemColor: Colors.grey,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        items: [
+        items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.home_outlined), label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(Icons.description_outlined), label: "Explore"),
-          BottomNavigationBarItem(icon: Icon(Icons.camera_alt), label: "Trips"),
           BottomNavigationBarItem(
               icon: Icon(Icons.food_bank_outlined), label: "Profile"),
           BottomNavigationBarItem(
