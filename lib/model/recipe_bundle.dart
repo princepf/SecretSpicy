@@ -62,3 +62,33 @@ class VegCards {
       required this.time,
       required this.color});
 }
+
+class Chefsdetail {
+  String chefimage;
+  String chefname;
+  String likes;
+
+  Chefsdetail({
+    required this.chefimage,
+    required this.chefname,
+    required this.likes,
+  });
+}
+
+class DiffDish {
+  String dishimage;
+  String dishname;
+  String dishdes;
+  String price;
+  String star;
+  String minute;
+
+  DiffDish({
+    required this.dishimage,
+    required this.dishname,
+    required this.dishdes,
+    required this.price,
+    required this.star,
+    required this.minute,
+  });
+}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thesecretespicy/colors.dart';
 import 'package:thesecretespicy/home_page.dart';
 import 'package:thesecretespicy/profil_page.dart';
 
@@ -15,7 +16,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int currentIndex = 0;
   List<Widget> screen = [
     const HomePage(),
-    const HomePage(),
     const CookAndChefsPage(),
     const ProfilePage(),
   ];
@@ -28,18 +28,17 @@ class _BottomNavBarState extends State<BottomNavBar> {
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
         elevation: 20,
-        selectedIconTheme: const IconThemeData(size: 30),
-        selectedItemColor: const Color(0xFF84AB5C),
+        selectedIconTheme: const IconThemeData(size: 32),
+        selectedItemColor: Colors.red,
         unselectedItemColor: Colors.grey,
         showSelectedLabels: false,
         showUnselectedLabels: false,
+        backgroundColor: Colors.white,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.home_outlined), label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.description_outlined), label: "Explore"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.food_bank_outlined), label: "Profile"),
+              icon: Icon(Icons.food_bank_outlined), label: "cooks"),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_outlined), label: "Profile"),
         ],

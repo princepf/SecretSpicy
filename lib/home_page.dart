@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {},
           ),
           centerTitle: true,
-          title: Image.asset("assets/images/logo.png"),
+          title: Image.asset("assets/images/foodlogo.png"),
           actions: [
             IconButton(
               icon: SvgPicture.asset("assets/icons/search.svg"),
