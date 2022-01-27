@@ -128,13 +128,19 @@ class ProfileMenuItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
         child: Row(
           children: [
-            SvgPicture.asset(iconSrc),
+            SvgPicture.asset(
+              iconSrc,
+              color: Colors.grey,
+            ),
             const SizedBox(
-              width: 5,
+              width: 15,
             ),
             Text(
               title,
-              style: const TextStyle(color: Colors.grey, fontSize: 16),
+              style: const TextStyle(
+                  color: Colors.black87,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16),
             ),
             const Spacer(),
             const Icon(
