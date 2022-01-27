@@ -18,10 +18,6 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          leading: IconButton(
-            icon: SvgPicture.asset("assets/icons/menu.svg"),
-            onPressed: () {},
-          ),
           centerTitle: true,
           title: Image.asset("assets/images/foodlogo.png"),
           actions: [

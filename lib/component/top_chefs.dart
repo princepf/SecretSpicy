@@ -38,52 +38,68 @@ class TopChefs extends StatelessWidget {
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: chefsdetail.length,
-          itemBuilder: (context, index) => Container(
-                alignment: Alignment.center,
-                margin: const EdgeInsets.only(left: 20),
-                height: 200,
-                width: 140,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20)),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 120,
-                      width: 140,
-                      child: Image(
-                          image: AssetImage(chefsdetail[index].chefimage)),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      chefsdetail[index].chefname,
-                      style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black87),
-                    ),
-                    const SizedBox(
-                      height: 7,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(
-                          Icons.favorite,
-                          color: Color(0xFFFF464C),
-                          size: 20,
-                        ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Text(chefsdetail[index].likes)
-                      ],
-                    ),
-                  ],
+          itemBuilder: (context, index) => Stack(children: [
+                Container(
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.only(left: 20),
+                  height: 200,
+                  width: 140,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 120,
+                        width: 140,
+                        child: Image(
+                            image: AssetImage(chefsdetail[index].chefimage)),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        chefsdetail[index].chefname,
+                        style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black87),
+                      ),
+                      const SizedBox(
+                        height: 7,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(
+                            Icons.favorite,
+                            color: Color(0xFFFF464C),
+                            size: 20,
+                          ),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(chefsdetail[index].likes)
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-              )),
+                Positioned(
+                  right: 0,
+                  bottom: 80,
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 20,
+                    width: 80,
+                    color: const Color(0xFFFF464C),
+                    child: const Text(
+                      "Featured",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ])),
     );
   }
 }

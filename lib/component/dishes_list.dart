@@ -65,135 +65,127 @@ class DishesList extends StatelessWidget {
           minute: '28'),
     ];
 
-    return GestureDetector(
-      onTap: () {},
-      child: SizedBox(
-        height: 600,
-        child: ListView.builder(
-          scrollDirection: Axis.vertical,
-          itemCount: diffdish.length,
-          itemBuilder: (context, index) => Container(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Stack(children: [
-              Container(
-                height: 120,
-                width: double.infinity,
-                color: Colors.transparent,
-              ),
-              Positioned(
-                right: 15,
-                child: Container(
-                  height: 120,
-                  width: 315,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15),
+    return Column(
+      children: diffdish.map((e) => item(e)).toList(),
+    );
+  }
+
+  Widget item(item) => Container(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Stack(children: [
+        Container(
+          height: 120,
+          width: double.infinity,
+          color: Colors.transparent,
+        ),
+        Positioned(
+          right: 15,
+          child: Container(
+            height: 120,
+            width: 315,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Container(
+              padding: const EdgeInsets.only(left: 70, right: 10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 5,
                   ),
-                  child: Container(
-                    padding: const EdgeInsets.only(left: 70, right: 10),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                  Text(
+                    item.dishname,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black87),
+                  ),
+                  const SizedBox(
+                    height: 3,
+                  ),
+                  Text(
+                    item.dishdes,
+                    style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black38),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Row(
                       children: [
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          diffdish[index].dishname,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black87),
+                        const Icon(
+                          Icons.alarm,
+                          size: 20,
                         ),
                         const SizedBox(
-                          height: 3,
+                          width: 5,
                         ),
-                        Text(
-                          diffdish[index].dishdes,
-                          style: const TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black38),
+                        Text(item.minute),
+                        const SizedBox(
+                          width: 20,
                         ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(vertical: 10),
-                          child: Row(
-                            children: [
-                              const Icon(
-                                Icons.alarm,
-                                size: 20,
-                              ),
-                              const SizedBox(
-                                width: 5,
-                              ),
-                              Text(diffdish[index].minute),
-                              const SizedBox(
-                                width: 20,
-                              ),
-                              const Icon(
-                                Icons.star,
-                                color: Colors.amber,
-                                size: 20,
-                              ),
-                              const SizedBox(
-                                width: 5,
-                              ),
-                              Text(diffdish[index].star),
-                            ],
-                          ),
+                        const Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                          size: 20,
                         ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Text(item.star),
                       ],
                     ),
                   ),
-                ),
+                ],
               ),
-              Positioned(
-                right: 15,
-                bottom: 0,
-                child: Container(
-                    alignment: Alignment.center,
-                    height: 30,
-                    width: 80,
-                    decoration: const BoxDecoration(
-                        color: Color(0xFFFF464C),
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30),
-                            bottomRight: Radius.circular(30))),
-                    child: Text(
-                      "\$ ${diffdish[index].price}",
-                      style: const TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    )),
-              ),
-              Positioned(
-                top: 2,
-                left: 20,
-                child: Container(
-                  margin: const EdgeInsets.only(top: 10),
-                  height: 100,
-                  width: 100,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.grey),
-                ),
-              ),
-              Positioned(
-                left: 15,
-                child: Container(
-                  margin: const EdgeInsets.symmetric(vertical: 5),
-                  height: 100,
-                  width: 100,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                          image: AssetImage(diffdish[index].dishimage))),
-                ),
-              ),
-            ]),
+            ),
           ),
         ),
-      ),
-    );
-  }
+        Positioned(
+          right: 15,
+          bottom: 0,
+          child: Container(
+              alignment: Alignment.center,
+              height: 30,
+              width: 80,
+              decoration: const BoxDecoration(
+                  color: Color(0xFFFF464C),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30))),
+              child: Text(
+                "\$ ${item.price}",
+                style: const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
+              )),
+        ),
+        Positioned(
+          top: 2,
+          left: 20,
+          child: Container(
+            margin: const EdgeInsets.only(top: 10),
+            height: 100,
+            width: 100,
+            decoration:
+                const BoxDecoration(shape: BoxShape.circle, color: Colors.grey),
+          ),
+        ),
+        Positioned(
+          left: 15,
+          child: Container(
+            margin: const EdgeInsets.symmetric(vertical: 5),
+            height: 100,
+            width: 100,
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(image: AssetImage(item.dishimage))),
+          ),
+        ),
+      ]));
 }
