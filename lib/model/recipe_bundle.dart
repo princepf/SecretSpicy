@@ -24,7 +24,7 @@ List<RacipeBundle> racipeBundle = [
     title: "Cook Something New Everyday",
     description: "New and tasty recipes every minute",
     imageSrc: "assets/images/cook_new@2x.png",
-    color: const Color(0xFFD82D40),
+    color: const Color(0xFFFF464C),
   ),
   RacipeBundle(
     id: 2,
@@ -43,6 +43,16 @@ List<RacipeBundle> racipeBundle = [
     description: "What's your favorite food dish make it now",
     imageSrc: "assets/images/food_court@2x.png",
     color: const Color(0xFF2DBBD8),
+  ),
+  RacipeBundle(
+    id: 4,
+    chefs: 14,
+    recipes: 15,
+    title: "Todays Special Recipe",
+    description:
+        "A recipe has no soul. You as the cook must bring soul to the recipe.",
+    imageSrc: "assets/images/dish@2.png",
+    color: const Color.fromARGB(255, 255, 167, 35),
   )
 ];
 

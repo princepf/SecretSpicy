@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'bottom_nav_bar.dart';
+import 'package:thesecretespicy/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(color: Colors.white, elevation: 0),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const BottomNavBar(),
+      home: const SplashScreen(),
     );
   }
 }

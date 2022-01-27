@@ -48,7 +48,7 @@ class RecipeBundleCard extends StatelessWidget {
                       style: const TextStyle(
                         color: Colors.white54,
                       ),
-                      maxLines: 2,
+                      maxLines: 3,
                       overflow: TextOverflow.ellipsis,
                     ),
                     const Spacer(),

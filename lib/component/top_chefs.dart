@@ -72,7 +72,7 @@ class TopChefs extends StatelessWidget {
                       children: [
                         const Icon(
                           Icons.favorite,
-                          color: Colors.red,
+                          color: Color(0xFFFF464C),
                           size: 20,
                         ),
                         const SizedBox(

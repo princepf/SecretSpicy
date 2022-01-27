@@ -14,7 +14,7 @@ class DishesList extends StatelessWidget {
           dishdes:
               'You can make bhajia with diffrent types of veggies of your choice.',
           star: '5.0',
-          price: '50',
+          price: '7',
           minute: '45'),
       DiffDish(
           dishimage: 'assets/images/vegdish2.png',
@@ -22,14 +22,14 @@ class DishesList extends StatelessWidget {
           dishdes:
               'perfect for the weeknights and special for your holiday table',
           star: '4.5',
-          price: '45',
+          price: '9',
           minute: '34'),
       DiffDish(
           dishimage: 'assets/images/vegdish3.png',
           dishname: 'Gujarati Thepla',
           dishdes: 'The origin of Thepla is Gujarat and It is our staple diet.',
           star: '4.9',
-          price: '30',
+          price: '6',
           minute: '35'),
       DiffDish(
           dishimage: 'assets/images/vegdish4.png',
@@ -37,7 +37,7 @@ class DishesList extends StatelessWidget {
           dishdes:
               'Delicious healthy vegetarian meal that your family will love.',
           star: '4.2',
-          price: '52',
+          price: '12',
           minute: '45'),
       DiffDish(
           dishimage: 'assets/images/vegdish5.png',
@@ -45,7 +45,7 @@ class DishesList extends StatelessWidget {
           dishdes:
               'Chana Masala is a classic Indian stew typically made with spiced.',
           star: '4.8',
-          price: '35',
+          price: '10',
           minute: '35'),
       DiffDish(
           dishimage: 'assets/images/vegdish6.png',
@@ -53,7 +53,7 @@ class DishesList extends StatelessWidget {
           dishdes:
               'Spinach and Mushrooms that can be made in one pan and adaptable.',
           star: '4.3',
-          price: '68',
+          price: '9.5',
           minute: '30'),
       DiffDish(
           dishimage: 'assets/images/vegdish7.png',
@@ -61,7 +61,7 @@ class DishesList extends StatelessWidget {
           dishdes:
               'Instant Pot or on the stovetop Vegan-adaptable and Gluten-free.',
           star: '4.0',
-          price: '54',
+          price: '12',
           minute: '28'),
     ];
 
@@ -157,7 +157,7 @@ class DishesList extends StatelessWidget {
                     height: 30,
                     width: 80,
                     decoration: const BoxDecoration(
-                        color: Colors.red,
+                        color: Color(0xFFFF464C),
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(30),
                             bottomRight: Radius.circular(30))),

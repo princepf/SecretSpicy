@@ -59,7 +59,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 image: AssetImage("assets/images/pic.png"))),
                       ),
                       const Text(
-                        "John Deo",
+                        "Carlos Mejia",
                         style: TextStyle(
                             color: Colors.grey,
                             fontWeight: FontWeight.bold,
@@ -69,7 +69,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         height: 5,
                       ),
                       const Text(
-                        "johndeo123@gmail.com",
+                        "carlosmejia123@gmail.com",
                         style: TextStyle(
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:thesecretespicy/colors.dart';
 import 'package:thesecretespicy/home_page.dart';
 import 'package:thesecretespicy/profil_page.dart';
 

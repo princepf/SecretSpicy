@@ -14,7 +14,7 @@ class VegDinnerCard extends StatelessWidget {
         dishimage: 'assets/images/dish1.png',
         titles: 'Berry and oats Breakfast Bowl',
         time: '20',
-        color: const Color(0xFFD82D40),
+        color: const Color(0xFFFF464C),
       ),
       VegCards(
         chefimage: 'assets/images/chef_2.png',
@@ -135,7 +135,7 @@ class VegDinnerCard extends StatelessWidget {
                               child: Text(
                                 vegcard[index].chefname,
                                 style: const TextStyle(
-                                    color: Colors.white, fontSize: 20),
+                                    color: Colors.white, fontSize: 18),
                               ),
                             ),
                           ],
