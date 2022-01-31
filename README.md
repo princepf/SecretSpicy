@@ -1,4 +1,4 @@
-# thesecretespicy
+# secretespicy
 
 A new Flutter application.
 
